@@ -38,3 +38,41 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+# README
+
+## Database Setup
+
+Follow these steps to set up the database for the project:
+
+1. **Create Database**:
+   ```sql
+   CREATE DATABASE protyping;
+   USE protyping;
+   ```
+
+2. **Create Users Table**:
+   ```sql
+   CREATE TABLE users (
+     id INT AUTO_INCREMENT PRIMARY KEY,
+     firstname VARCHAR(255) NOT NULL,
+     lastname VARCHAR(255) NOT NULL,
+     email VARCHAR(255) NOT NULL UNIQUE,
+     password VARCHAR(255) NOT NULL,
+     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   );
+   ```
+
+3. **Show Tables**:
+   ```sql
+   SHOW TABLES;
+   ```
+
+4. **View Users Data**:
+   ```sql
+   SELECT * FROM users;
+   ```
+
+Ensure you have the necessary permissions to create databases and tables in your SQL environment before executing these commands.
+
